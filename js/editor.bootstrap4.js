@@ -5,7 +5,7 @@
 (function(factory) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD
-		define(['jquery', 'datatables.net-bs', 'datatables.net-editor'], function(
+		define(['jquery', 'datatables.net-bs4', 'datatables.net-editor'], function(
 			$
 		) {
 			return factory($, window, document);
@@ -18,7 +18,7 @@
 			}
 
 			if (!$ || !$.fn.dataTable) {
-				$ = require('datatables.net-bs')(root, $).$;
+				$ = require('datatables.net-bs4')(root, $).$;
 			}
 
 			if (!$.fn.dataTable.Editor) {
